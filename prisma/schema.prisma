@@ -1,0 +1,483 @@
+// Sajaa — Pediatric Occupational Therapy Platform
+// Data model: PostgreSQL via Prisma.
+// In production this database lives in Supabase (see docs/ARCHITECTURE.md);
+// locally it runs against any PostgreSQL 14+ instance.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Identity & access
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum Role {
+  ADMIN
+  THERAPIST
+  ASSISTANT
+  RECEPTIONIST
+  PARENT
+}
+
+model User {
+  id            String   @id @default(cuid())
+  // Mirrors the Supabase auth.users id in production so RLS policies can join.
+  authId        String?  @unique
+  email         String   @unique
+  name          String
+  role          Role     @default(THERAPIST)
+  title         String? // e.g. "OTR/L", "Pediatric OT"
+  licenseNumber String?
+  phone         String?
+  avatarUrl     String?
+  signatureUrl  String? // stored signature image used on signed PDFs
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  patients       Patient[]       @relation("PrimaryTherapist")
+  assessments    Assessment[]
+  documents      Document[]      @relation("DocumentAuthor")
+  signedDocs     Document[]      @relation("DocumentSigner")
+  appointments   Appointment[]
+  treatmentPlans TreatmentPlan[]
+  templates      AssessmentTemplate[]
+  auditLogs      AuditLog[]
+  attachments    Attachment[]
+}
+
+// Single-row table holding clinic branding used across the app and on PDFs.
+model ClinicSettings {
+  id         String  @id @default("clinic")
+  name       String  @default("Sajaa Pediatric Therapy")
+  logoUrl    String?
+  brandColor String  @default("#0d9488")
+  address    String?
+  phone      String?
+  email      String?
+  website    String?
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Patients
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+enum PatientStatus {
+  ACTIVE
+  WAITLIST
+  INACTIVE
+  DISCHARGED
+}
+
+model Patient {
+  id          String        @id @default(cuid())
+  mrn         String        @unique // medical record number, auto-generated
+  firstName   String
+  lastName    String
+  dob         DateTime
+  gender      Gender
+  nationality String?
+  photoUrl    String?
+  status      PatientStatus @default(ACTIVE)
+
+  school String?
+  grade  String?
+
+  diagnoses      String[] @default([])
+  referralSource String?
+  physician      String?
+
+  insuranceProvider String?
+  insuranceNumber   String?
+
+  allergies            String?
+  medications          String?
+  medicalHistory       String?
+  developmentalHistory String?
+  birthHistory         String?
+  familyHistory        String?
+  previousTherapies    String?
+
+  primaryTherapistId String?
+  primaryTherapist   User?   @relation("PrimaryTherapist", fields: [primaryTherapistId], references: [id])
+
+  contacts       Contact[]
+  attachments    Attachment[]
+  assessments    Assessment[]
+  documents      Document[]
+  treatmentPlans TreatmentPlan[]
+  goals          Goal[]
+  appointments   Appointment[]
+  invoices       Invoice[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([lastName, firstName])
+  @@index([status])
+}
+
+// Parents, guardians and emergency contacts.
+model Contact {
+  id           String  @id @default(cuid())
+  patientId    String
+  patient      Patient @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  name         String
+  relationship String // Mother, Father, Guardian…
+  phone        String?
+  altPhone     String?
+  email        String?
+  isPrimary    Boolean @default(false)
+  isEmergency  Boolean @default(false)
+}
+
+enum AttachmentKind {
+  PHOTO
+  VIDEO
+  DOCUMENT
+}
+
+model Attachment {
+  id           String         @id @default(cuid())
+  patientId    String
+  patient      Patient        @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  kind         AttachmentKind
+  fileName     String
+  mimeType     String
+  // Storage path (Supabase Storage object path in production).
+  url          String
+  sizeBytes    Int            @default(0)
+  description  String?
+  uploadedById String?
+  uploadedBy   User?          @relation(fields: [uploadedById], references: [id])
+  createdAt    DateTime       @default(now())
+
+  @@index([patientId])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Assessments
+// ─────────────────────────────────────────────────────────────────────────────
+
+// A template describes the structure, items, scoring rules and interpretation
+// bands of an assessment. `schema` and `scoring` are JSON documents — see
+// src/lib/assessment/types.ts for their TypeScript shape.
+model AssessmentTemplate {
+  id             String   @id @default(cuid())
+  name           String
+  abbreviation   String?
+  category       String // "Sensory", "Fine Motor", "ADLs", …
+  description    String?
+  ageMinMonths   Int?
+  ageMaxMonths   Int?
+  isStandardized Boolean  @default(false)
+  isActive       Boolean  @default(true)
+
+  // Version-control lineage: editing a published template creates a new row
+  // pointing back at its predecessor. Completed assessments keep referencing
+  // the exact version they were scored with.
+  version          Int     @default(1)
+  parentTemplateId String?
+
+  schema  Json // { sections: [{ id,title,items:[{id,label,type,options,score…}] }] }
+  scoring Json // { method, bands: [{ min,max,label,interpretation }] }
+
+  createdById String?
+  createdBy   User?    @relation(fields: [createdById], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  assessments Assessment[]
+
+  @@index([category])
+}
+
+enum AssessmentStatus {
+  IN_PROGRESS
+  COMPLETED
+}
+
+model Assessment {
+  id             String             @id @default(cuid())
+  patientId      String
+  patient        Patient            @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  templateId     String
+  template       AssessmentTemplate @relation(fields: [templateId], references: [id])
+  therapistId    String
+  therapist      User               @relation(fields: [therapistId], references: [id])
+  status         AssessmentStatus   @default(IN_PROGRESS)
+  responses      Json               @default("{}") // itemId -> value
+  scores         Json? // computed section + total scores
+  interpretation String? // auto-generated, therapist-editable
+  notes          String?
+  completedAt    DateTime?
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+
+  @@index([patientId])
+  @@index([status])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Documentation
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum DocumentType {
+  INITIAL_EVALUATION
+  RE_EVALUATION
+  SOAP_NOTE
+  DAILY_NOTE
+  SESSION_NOTE
+  PROGRESS_REPORT
+  DISCHARGE_REPORT
+  SCHOOL_REPORT
+  INSURANCE_REPORT
+  HOME_PROGRAM
+  PARENT_EDUCATION
+  CONSULTATION_NOTE
+  REFERRAL_LETTER
+  MEDICAL_NECESSITY_LETTER
+}
+
+enum DocumentStatus {
+  DRAFT
+  COMPLETED
+  SIGNED
+  AMENDED
+}
+
+// Every clinical document. `content` is a JSON map of section-id -> rich text,
+// where the section list is defined per document type in
+// src/lib/documents/definitions.ts (SOAP has S/O/A/P, evaluations have
+// background/observations/results/…).
+model Document {
+  id          String         @id @default(cuid())
+  patientId   String
+  patient     Patient        @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  therapistId String
+  therapist   User           @relation("DocumentAuthor", fields: [therapistId], references: [id])
+  type        DocumentType
+  status      DocumentStatus @default(DRAFT)
+  title       String
+  content     Json           @default("{}")
+  sessionDate DateTime       @default(now())
+
+  signedAt   DateTime?
+  signedById String?
+  signedBy   User?   @relation("DocumentSigner", fields: [signedById], references: [id])
+
+  appointment Appointment?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([patientId])
+  @@index([type])
+  @@index([status])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Treatment planning
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum PlanStatus {
+  ACTIVE
+  COMPLETED
+  DISCONTINUED
+}
+
+model TreatmentPlan {
+  id               String     @id @default(cuid())
+  patientId        String
+  patient          Patient    @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  therapistId      String
+  therapist        User       @relation(fields: [therapistId], references: [id])
+  title            String
+  status           PlanStatus @default(ACTIVE)
+  startDate        DateTime
+  endDate          DateTime?
+  frequencyPerWeek Int        @default(1)
+  sessionMinutes   Int        @default(45)
+  focusAreas       String[]   @default([])
+  notes            String?
+  goals            Goal[]
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  @@index([patientId])
+}
+
+enum GoalLevel {
+  LONG_TERM
+  SHORT_TERM
+  OBJECTIVE
+}
+
+enum GoalStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  ACHIEVED
+  MODIFIED
+  DISCONTINUED
+}
+
+model Goal {
+  id              String        @id @default(cuid())
+  treatmentPlanId String
+  treatmentPlan   TreatmentPlan @relation(fields: [treatmentPlanId], references: [id], onDelete: Cascade)
+  patientId       String
+  patient         Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  // LTG -> STG -> objective hierarchy
+  parentGoalId    String?
+  parentGoal      Goal?         @relation("GoalHierarchy", fields: [parentGoalId], references: [id])
+  subGoals        Goal[]        @relation("GoalHierarchy")
+
+  level          GoalLevel
+  status         GoalStatus @default(NOT_STARTED)
+  description    String
+  baseline       String?
+  targetCriteria String?
+  targetDate     DateTime?
+  // 0–100, derived from the latest progress update
+  progress       Int        @default(0)
+
+  progressUpdates GoalProgress[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([patientId])
+  @@index([treatmentPlanId])
+}
+
+model GoalProgress {
+  id     String   @id @default(cuid())
+  goalId String
+  goal   Goal     @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  date   DateTime @default(now())
+  value  Int // 0–100
+  note   String?
+
+  @@index([goalId])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Scheduling
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+model Appointment {
+  id          String            @id @default(cuid())
+  patientId   String
+  patient     Patient           @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  therapistId String
+  therapist   User              @relation(fields: [therapistId], references: [id])
+  start       DateTime
+  end         DateTime
+  status      AppointmentStatus @default(SCHEDULED)
+  room        String?
+  notes       String?
+
+  // iCal-style RRULE string; occurrences of one series share recurrenceId.
+  recurrenceRule String?
+  recurrenceId   String?
+
+  reminderSentAt DateTime?
+
+  // Session note written for this visit
+  documentId String?   @unique
+  document   Document? @relation(fields: [documentId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([therapistId, start])
+  @@index([patientId, start])
+}
+
+model WaitlistEntry {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String?
+  reason    String?
+  priority  Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Billing
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  PARTIALLY_PAID
+  OVERDUE
+  VOID
+}
+
+model Invoice {
+  id        String        @id @default(cuid())
+  number    String        @unique
+  patientId String
+  patient   Patient       @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  status    InvoiceStatus @default(DRAFT)
+  issueDate DateTime      @default(now())
+  dueDate   DateTime?
+  // [{ description, quantity, unitPrice }]
+  items     Json          @default("[]")
+  subtotal  Decimal       @default(0) @db.Decimal(10, 2)
+  tax       Decimal       @default(0) @db.Decimal(10, 2)
+  total     Decimal       @default(0) @db.Decimal(10, 2)
+  payments  Payment[]
+  notes     String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([patientId])
+  @@index([status])
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  invoiceId String
+  invoice   Invoice  @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  amount    Decimal  @db.Decimal(10, 2)
+  method    String   @default("CASH") // CASH / CARD / TRANSFER / INSURANCE
+  reference String?
+  paidAt    DateTime @default(now())
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Compliance
+// ─────────────────────────────────────────────────────────────────────────────
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+  action     String // CREATE / UPDATE / DELETE / SIGN / EXPORT / LOGIN
+  entityType String // Patient / Document / Assessment / …
+  entityId   String?
+  meta       Json?
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
