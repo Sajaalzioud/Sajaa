@@ -115,6 +115,6 @@ recommendations for your child's teacher.
 assessment. If you have concerns about your child's development, consult a qualified
 professional.*
 
-**Saja Ali Zioud** is an occupational therapist at Kalm Clinic in Qatar.
-**Wondering about your child's sensory needs?** [Contact Kalm Clinic to book an
-assessment] `[link TO CONFIRM]`.
+**Saja Ali Zioud** is a pediatric occupational therapist at Kalm Clinic in Lusail, Qatar.
+**Wondering about your child's sensory needs?** Call Kalm Clinic at **+974 3311 2030**
+or email **sajaalzioud@gmail.com** to book a sensory-focused assessment.

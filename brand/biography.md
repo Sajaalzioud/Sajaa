@@ -6,14 +6,16 @@
 
 ## Short bio (~50 words) — for bylines, social profiles
 
-Saja Ali Zioud is an occupational therapist at Kalm Clinic in Qatar. She works with
-children and families `[TO CONFIRM primary caseload]`, helping children develop the
-skills they need to play, learn, and take part in everyday life. She shares practical,
-evidence-based guidance for parents, schools, and therapists.
+Saja Ali Zioud is a pediatric occupational therapist at Kalm Clinic in Lusail, Qatar.
+She provides evidence-based assessment and intervention in sensory integration, motor
+development, feeding, and school readiness — helping children gain the skills and
+independence to thrive at home and at school, in close partnership with families,
+schools, and multidisciplinary teams.
 
 ## Medium bio (~120 words) — for speaker intros, guest articles
 
-Saja Ali Zioud is an occupational therapist practicing at Kalm Clinic in Qatar
+Saja Ali Zioud is a pediatric occupational therapist practicing at Kalm Clinic in
+Lusail, Qatar
 `[TO CONFIRM: years of experience, e.g. "with X years of experience in pediatric
 practice"]`. Her work focuses on `[TO CONFIRM specialty areas — e.g., sensory
 integration, fine motor development, feeding, school readiness]`, supporting children
@@ -40,14 +42,14 @@ presentations/workshops already delivered. Structure to use:]`
 
 ## Speaker profile — one-page skeleton
 
-- **Name / title:** Saja Ali Zioud, Occupational Therapist, Kalm Clinic, Qatar
+- **Name / title:** Saja Ali Zioud, Pediatric Occupational Therapist, Kalm Clinic, Lusail, Qatar
 - **Speaks on:** pediatric occupational therapy, sensory integration, school readiness,
   parent coaching `[TO CONFIRM preferred topics]`
 - **Audiences:** parents, schools/teachers, healthcare professionals, therapy students
 - **Languages:** `[TO CONFIRM — Arabic/English]`
 - **Formats:** parent seminars, teacher workshops, conference talks, podcast interviews
 - **Past engagements:** `[list ONLY real ones — leave empty until they exist]`
-- **Booking contact:** `[TO CONFIRM email/phone]`
+- **Booking contact:** sajaalzioud@gmail.com · +974 7011 7666 (direct) · +974 3311 2030 (Kalm Clinic)
 - **Headshot:** `[NEEDED — professional photo, Phase 0 priority]`
 
 ## Information needed from Saja (send her this checklist)
@@ -60,7 +62,7 @@ presentations/workshops already delivered. Structure to use:]`
 - [ ] Languages spoken
 - [ ] Professional memberships (if any)
 - [ ] Exact Arabic spelling of her name and preferred Arabic title
-- [ ] Kalm Clinic: official name spelling, address, phone, booking link, website
-- [ ] Preferred contact email for professional inquiries
+- [x] Kalm Clinic: Lusail, Qatar · +974 3311 2030 (street address / booking link still open)
+- [x] Contact: sajaalzioud@gmail.com · +974 7011 7666
 - [ ] Domain preference (e.g., sajaalzioud.com) and social handles she owns
 - [ ] Professional headshot (or plan to get one)

@@ -101,6 +101,6 @@ participation in daily activities. Many children benefit from a team approach.
 assessment. If you have concerns about your child's development, consult a qualified
 professional.*
 
-**Saja Ali Zioud** is an occupational therapist at Kalm Clinic in Qatar.
-**Concerned about your child's development?** [Contact Kalm Clinic to book an
-assessment] `[link TO CONFIRM]`.
+**Saja Ali Zioud** is a pediatric occupational therapist at Kalm Clinic in Lusail, Qatar.
+**Concerned about your child's development?** Call Kalm Clinic at **+974 3311 2030**
+or email **sajaalzioud@gmail.com** to book an assessment.

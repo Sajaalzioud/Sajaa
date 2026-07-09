@@ -10,8 +10,8 @@ Use this exact block everywhere — website footer, article bylines, social bios
 directories, email signature, presentation title slides:
 
 > **Saja Ali Zioud**
-> Occupational Therapist
-> Kalm Clinic · Qatar
+> Pediatric Occupational Therapist
+> Kalm Clinic · Lusail, Qatar
 
 Arabic equivalent: `[TO CONFIRM — exact Arabic spelling of name and clinic with Saja]`
 
@@ -45,10 +45,12 @@ For local SEO, these must be *character-identical* across all platforms:
 | Field | Value |
 |---|---|
 | Practitioner | Saja Ali Zioud |
-| Business | Kalm Clinic `[TO CONFIRM official registered English name]` |
-| Address | `[TO CONFIRM clinic address]` |
-| Phone | `[TO CONFIRM public booking number]` |
-| Booking link | `[TO CONFIRM]` |
+| Business | Kalm Clinic |
+| Location | Lusail, Qatar `[street address TO CONFIRM if published]` |
+| Clinic phone (booking) | +974 3311 2030 |
+| Direct phone | +974 7011 7666 |
+| Email | sajaalzioud@gmail.com |
+| Booking link | `[TO CONFIRM if an online booking page exists]` |
 
 Platforms to align (checklist):
 - [ ] Google Business Profile (practitioner listing under Kalm Clinic)
