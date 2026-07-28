@@ -19,6 +19,9 @@ Rehabilitation) and Saja Ali (Pediatric Rehabilitation).
 | `TRIAD_Executive_Summary_AR.md` | One-page executive summary — Arabic (source, Markdown, RTL) |
 | `TRIAD_Executive_Summary_EN.docx` / `.pdf` | One-page summary Word/PDF — English (14 pages formatted) |
 | `TRIAD_Executive_Summary_AR.docx` / `.pdf` | One-page summary Word/PDF — Arabic (14 pages formatted) |
+| **Investor Materials** | |
+| `TRIAD_Investor_FAQ.md` | Frequently asked questions addressing investment concerns (source, Markdown) |
+| `TRIAD_Investor_FAQ.docx` / `.pdf` | FAQ Word/PDF version for distribution |
 | **Templates & Build** | |
 | `build/ref_en.docx`, `build/ref_ar.docx` | Pandoc reference-doc templates (branding, fonts, theme colors) used to style the Word output |
 
@@ -34,6 +37,15 @@ timeline.
 All financial figures are indicative planning estimates (EGP, with USD
 equivalents at ≈50 EGP/USD, July 2026) pending a formal feasibility study and
 vendor quotations — see the Appendix in each document for assumptions.
+
+## Investor Outreach Workflow
+
+**Suggested distribution sequence:**
+
+1. **Initial contact**: Send `TRIAD_Executive_Summary_EN.docx` (or Arabic equivalent) with a cover letter introducing the founders and opportunity.
+2. **Interested parties**: Share `TRIAD_Investor_FAQ.pdf` to address common questions.
+3. **Serious investors**: Provide full `TRIAD_Business_Proposal_EN.docx` under NDA, along with due diligence materials (not in this folder; prepared separately during investor discussion).
+4. **Due diligence phase**: Founders schedule site visits, financial deep-dives, and term-sheet negotiation directly with investor representatives.
 
 ## Regenerating the Word/PDF documents
 
