@@ -1,0 +1,86 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad2_horiz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad2_accent_horiz" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5FE3C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2FB89C;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_c2_horiz" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="glow_effect_c2_horiz">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <circle cx="100" cy="100" r="50" fill="url(#glow_c2_horiz)"/>
+
+  <!-- Mark: Left hexagon -->
+  <path d="M 70 80 L 80 70 L 92 80 L 88 105 L 72 110 Z"
+        fill="url(#grad2_horiz)"
+        filter="url(#glow_effect_c2_horiz)"
+        opacity="0.9"/>
+
+  <!-- Mark: Center hexagon -->
+  <path d="M 92 80 L 108 68 L 120 80 L 115 110 L 98 116 Z"
+        fill="url(#grad2_accent_horiz)"
+        filter="url(#glow_effect_c2_horiz)"
+        opacity="0.95"/>
+
+  <!-- Mark: Right hexagon -->
+  <path d="M 120 80 L 135 68 L 145 88 L 138 112 L 120 115 Z"
+        fill="url(#grad2_horiz)"
+        filter="url(#glow_effect_c2_horiz)"
+        opacity="0.88"/>
+
+  <!-- Mark: Connecting lines -->
+  <line x1="92" y1="80" x2="108" y2="68"
+        stroke="#00D9D9"
+        stroke-width="1"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="88" y1="105" x2="107" y2="98"
+        stroke="#5FE3C0"
+        stroke-width="1"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <!-- Mark: Center node -->
+  <circle cx="107" cy="90" r="2"
+          fill="#00D9D9"
+          filter="url(#glow_effect_c2_horiz)"
+          opacity="0.85"/>
+
+  <!-- Wordmark: Main text -->
+  <text x="280" y="130"
+        font-family="Poppins, sans-serif"
+        font-size="76"
+        font-weight="700"
+        fill="#0099B3"
+        letter-spacing="4">TRIAD</text>
+
+  <!-- Wordmark: Subtitle -->
+  <text x="280" y="175"
+        font-family="Poppins, sans-serif"
+        font-size="20"
+        font-weight="600"
+        fill="#00D9D9"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+</svg>

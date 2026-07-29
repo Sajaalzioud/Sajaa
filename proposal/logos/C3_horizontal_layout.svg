@@ -1,0 +1,99 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+
+    <radialGradient id="grad3_primary_horiz" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1E9B97;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D4D4A;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="grad3_secondary_horiz" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#8FFCE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4DB8A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F7A6B;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="grad3_accent_horiz" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFB88C;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E8845D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B84420;stop-opacity:1" />
+    </radialGradient>
+
+    <filter id="soft_glow_c3_horiz">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soft_shadow_horiz">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="0.75" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="offsetcolor"/>
+      <feComposite in="offsetcolor" in2="offsetblur" operator="in" result="offsetblur"/>
+      <feMerge>
+        <feMergeNode in="offsetblur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top-left organic form (care) -->
+  <path d="M 45 65 Q 30 75 37 105 Q 45 125 62 125 Q 75 125 78 110 Q 82 90 70 75 Q 60 60 45 65 Z"
+        fill="url(#grad3_primary_horiz)"
+        filter="url(#soft_shadow_horiz)"
+        opacity="0.85"/>
+
+  <!-- Top-right organic form (healing) -->
+  <path d="M 105 70 Q 130 58 125 95 Q 120 120 100 127 Q 80 132 73 105 Q 65 88 80 75 Q 95 62 105 70 Z"
+        fill="url(#grad3_accent_horiz)"
+        filter="url(#soft_shadow_horiz)"
+        opacity="0.82"/>
+
+  <!-- Bottom center organic form (growth) -->
+  <path d="M 75 115 Q 55 140 65 170 Q 87 190 115 185 Q 135 182 125 150 Q 118 120 95 115 Q 82 112 75 115 Z"
+        fill="url(#grad3_secondary_horiz)"
+        filter="url(#soft_shadow_horiz)"
+        opacity="0.83"/>
+
+  <!-- Connecting threads -->
+  <path d="M 65 100 Q 75 107 85 115"
+        fill="none"
+        stroke="#3EEAE8"
+        stroke-width="1"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <path d="M 85 100 Q 80 107 75 115"
+        fill="none"
+        stroke="#FFB88C"
+        stroke-width="1"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <!-- Center focal point -->
+  <circle cx="75" cy="110" r="1.8"
+          fill="#3EEAE8"
+          filter="url(#soft_glow_c3_horiz)"
+          opacity="0.7"/>
+
+  <!-- Wordmark: Main text -->
+  <text x="280" y="130"
+        font-family="Inter, sans-serif"
+        font-size="72"
+        font-weight="700"
+        fill="#0D4D4A"
+        letter-spacing="3">TRIAD</text>
+
+  <!-- Wordmark: Subtitle -->
+  <text x="280" y="175"
+        font-family="Inter, sans-serif"
+        font-size="19"
+        font-weight="600"
+        fill="#1E9B97"
+        letter-spacing="1.5">THERAPEUTIC CLINIC</text>
+</svg>

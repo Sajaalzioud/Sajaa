@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad1_horiz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_horiz" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2B9B8F;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="shadow_horiz">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <circle cx="100" cy="100" r="60" fill="url(#glow_horiz)"/>
+
+  <!-- Mark: Base curve -->
+  <path d="M 40 160 Q 100 125, 160 160"
+        fill="none"
+        stroke="url(#grad1_horiz)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz)"
+        opacity="0.9"/>
+
+  <!-- Mark: Middle curve -->
+  <path d="M 30 120 Q 100 75, 170 120"
+        fill="none"
+        stroke="url(#grad1_horiz)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz)"
+        opacity="0.95"/>
+
+  <!-- Mark: Top curve -->
+  <path d="M 20 80 Q 100 35, 180 80"
+        fill="none"
+        stroke="url(#grad1_horiz)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz)"
+        opacity="1"/>
+
+  <!-- Center focal point -->
+  <circle cx="100" cy="100" r="3" fill="#2B9B8F" opacity="0.6"/>
+
+  <!-- Wordmark: Main text -->
+  <text x="280" y="130"
+        font-family="Lora, serif"
+        font-size="72"
+        font-weight="700"
+        fill="#1F5F5A"
+        letter-spacing="3">TRIAD</text>
+
+  <!-- Wordmark: Subtitle -->
+  <text x="280" y="175"
+        font-family="Lora, serif"
+        font-size="20"
+        font-weight="400"
+        fill="#2B9B8F"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+</svg>

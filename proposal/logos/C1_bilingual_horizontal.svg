@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad1_bilingual" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_bilingual" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2B9B8F;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="shadow_bilingual">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Mark centered -->
+  <!-- Glow background -->
+  <circle cx="150" cy="100" r="60" fill="url(#glow_bilingual)"/>
+
+  <!-- Mark: Base curve -->
+  <path d="M 90 160 Q 150 125, 210 160"
+        fill="none"
+        stroke="url(#grad1_bilingual)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_bilingual)"
+        opacity="0.9"/>
+
+  <!-- Mark: Middle curve -->
+  <path d="M 80 120 Q 150 75, 220 120"
+        fill="none"
+        stroke="url(#grad1_bilingual)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_bilingual)"
+        opacity="0.95"/>
+
+  <!-- Mark: Top curve -->
+  <path d="M 70 80 Q 150 35, 230 80"
+        fill="none"
+        stroke="url(#grad1_bilingual)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_bilingual)"
+        opacity="1"/>
+
+  <!-- Center focal point -->
+  <circle cx="150" cy="100" r="3" fill="#2B9B8F" opacity="0.6"/>
+
+  <!-- English text on right side -->
+  <text x="380" y="130"
+        font-family="Lora, serif"
+        font-size="60"
+        font-weight="700"
+        fill="#1F5F5A"
+        letter-spacing="2">TRIAD</text>
+
+  <text x="380" y="170"
+        font-family="Lora, serif"
+        font-size="16"
+        font-weight="400"
+        fill="#2B9B8F"
+        letter-spacing="1.5">THERAPEUTIC CLINIC</text>
+
+  <!-- Arabic text on far right side (RTL) -->
+  <text x="1080" y="130"
+        font-family="Cairo, sans-serif"
+        font-size="54"
+        font-weight="700"
+        text-anchor="end"
+        fill="#1F5F5A"
+        letter-spacing="2">ترياد</text>
+
+  <text x="1080" y="170"
+        font-family="Cairo, sans-serif"
+        font-size="16"
+        font-weight="400"
+        text-anchor="end"
+        fill="#2B9B8F"
+        letter-spacing="1.5">العيادة العلاجية</text>
+
+  <!-- Divider line -->
+  <line x1="730" y1="60" x2="730" y2="220"
+        stroke="#2B9B8F"
+        stroke-width="1"
+        opacity="0.2"
+        stroke-dasharray="3,2"/>
+</svg>

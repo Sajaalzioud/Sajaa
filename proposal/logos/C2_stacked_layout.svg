@@ -1,0 +1,88 @@
+<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad2_stack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad2_accent_stack" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5FE3C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2FB89C;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_c2_stack" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="glow_effect_c2_stack">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <circle cx="200" cy="110" r="60" fill="url(#glow_c2_stack)"/>
+
+  <!-- Mark: Left hexagon -->
+  <path d="M 160 90 L 175 75 L 190 88 L 182 120 L 165 125 Z"
+        fill="url(#grad2_stack)"
+        filter="url(#glow_effect_c2_stack)"
+        opacity="0.9"/>
+
+  <!-- Mark: Center hexagon -->
+  <path d="M 190 88 L 210 70 L 225 88 L 218 125 L 200 132 Z"
+        fill="url(#grad2_accent_stack)"
+        filter="url(#glow_effect_c2_stack)"
+        opacity="0.95"/>
+
+  <!-- Mark: Right hexagon -->
+  <path d="M 225 88 L 245 70 L 260 92 L 250 128 L 230 132 Z"
+        fill="url(#grad2_stack)"
+        filter="url(#glow_effect_c2_stack)"
+        opacity="0.88"/>
+
+  <!-- Mark: Connecting lines -->
+  <line x1="190" y1="88" x2="210" y2="70"
+        stroke="#00D9D9"
+        stroke-width="1.5"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="182" y1="120" x2="213" y2="105"
+        stroke="#5FE3C0"
+        stroke-width="1.5"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <!-- Mark: Center node -->
+  <circle cx="213" cy="100" r="2.5"
+          fill="#00D9D9"
+          filter="url(#glow_effect_c2_stack)"
+          opacity="0.85"/>
+
+  <!-- Wordmark: Main text -->
+  <text x="200" y="310"
+        font-family="Poppins, sans-serif"
+        font-size="68"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#0099B3"
+        letter-spacing="4">TRIAD</text>
+
+  <!-- Wordmark: Subtitle -->
+  <text x="200" y="365"
+        font-family="Poppins, sans-serif"
+        font-size="18"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#00D9D9"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+</svg>

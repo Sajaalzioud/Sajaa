@@ -1,0 +1,68 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="soft_shadow_mark_black">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.12" result="offsetcolor"/>
+      <feComposite in="offsetcolor" in2="offsetblur" operator="in" result="offsetblur"/>
+      <feMerge>
+        <feMergeNode in="offsetblur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top-left organic form (care) -->
+  <path d="M 110 110 Q 85 120 95 155 Q 105 180 130 180 Q 150 180 155 160 Q 160 135 145 115 Q 130 100 110 110 Z"
+        fill="#000000"
+        filter="url(#soft_shadow_mark_black)"
+        opacity="0.85"/>
+
+  <!-- Top-right organic form (healing) -->
+  <path d="M 185 115 Q 215 100 210 145 Q 205 180 180 190 Q 150 195 140 160 Q 130 135 150 120 Q 170 105 185 115 Z"
+        fill="#000000"
+        filter="url(#soft_shadow_mark_black)"
+        opacity="0.82"/>
+
+  <!-- Bottom center organic form (growth) -->
+  <path d="M 150 170 Q 120 195 135 240 Q 160 260 195 255 Q 220 250 210 215 Q 200 180 165 175 Q 152 170 150 170 Z"
+        fill="#000000"
+        filter="url(#soft_shadow_mark_black)"
+        opacity="0.83"/>
+
+  <!-- Connecting threads -->
+  <path d="M 135 160 Q 145 168 160 180"
+        fill="none"
+        stroke="#000000"
+        stroke-width="1.2"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <path d="M 175 160 Q 165 168 155 180"
+        fill="none"
+        stroke="#000000"
+        stroke-width="1.2"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <path d="M 155 160 Q 165 168 175 185"
+        fill="none"
+        stroke="#000000"
+        stroke-width="1.2"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <!-- Center focal point -->
+  <circle cx="150" cy="155" r="2.5"
+          fill="#000000"
+          opacity="0.6"/>
+
+  <!-- Decorative accents -->
+  <circle cx="125" cy="135" r="1"
+          fill="#000000"
+          opacity="0.25"/>
+
+  <circle cx="185" cy="138" r="1"
+          fill="#000000"
+          opacity="0.25"/>
+</svg>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad1_horiz_ar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_horiz_ar" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2B9B8F;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="shadow_horiz_ar">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Mark on right side (RTL layout) -->
+  <!-- Glow background -->
+  <circle cx="800" cy="100" r="60" fill="url(#glow_horiz_ar)"/>
+
+  <!-- Mark: Base curve -->
+  <path d="M 740 160 Q 800 125, 860 160"
+        fill="none"
+        stroke="url(#grad1_horiz_ar)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz_ar)"
+        opacity="0.9"/>
+
+  <!-- Mark: Middle curve -->
+  <path d="M 730 120 Q 800 75, 870 120"
+        fill="none"
+        stroke="url(#grad1_horiz_ar)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz_ar)"
+        opacity="0.95"/>
+
+  <!-- Mark: Top curve -->
+  <path d="M 720 80 Q 800 35, 880 80"
+        fill="none"
+        stroke="url(#grad1_horiz_ar)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#shadow_horiz_ar)"
+        opacity="1"/>
+
+  <!-- Center focal point -->
+  <circle cx="800" cy="100" r="3" fill="#2B9B8F" opacity="0.6"/>
+
+  <!-- Arabic Wordmark on left (RTL) -->
+  <!-- Main text - العيادة العلاجية -->
+  <text x="620" y="130"
+        font-family="Cairo, sans-serif"
+        font-size="64"
+        font-weight="700"
+        text-anchor="end"
+        fill="#1F5F5A"
+        letter-spacing="2">ترياد</text>
+
+  <!-- Subtitle -->
+  <text x="620" y="175"
+        font-family="Cairo, sans-serif"
+        font-size="18"
+        font-weight="400"
+        text-anchor="end"
+        fill="#2B9B8F"
+        letter-spacing="1.5">العيادة العلاجية</text>
+</svg>

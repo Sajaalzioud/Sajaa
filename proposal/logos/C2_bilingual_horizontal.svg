@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap');
+    </style>
+
+    <linearGradient id="grad2_bilingual" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_bilingual_c2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="glow_effect_bilingual_c2">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Mark centered -->
+  <!-- Glow background -->
+  <circle cx="150" cy="100" r="50" fill="url(#glow_bilingual_c2)"/>
+
+  <!-- Mark: Left hexagon -->
+  <path d="M 120 80 L 130 70 L 142 80 L 138 105 L 122 110 Z"
+        fill="url(#grad2_bilingual)"
+        filter="url(#glow_effect_bilingual_c2)"
+        opacity="0.9"/>
+
+  <!-- Mark: Center hexagon -->
+  <path d="M 142 80 L 158 68 L 170 80 L 165 110 L 148 116 Z"
+        fill="url(#grad2_bilingual)"
+        filter="url(#glow_effect_bilingual_c2)"
+        opacity="0.95"/>
+
+  <!-- Mark: Right hexagon -->
+  <path d="M 170 80 L 185 68 L 195 88 L 188 112 L 170 115 Z"
+        fill="url(#grad2_bilingual)"
+        filter="url(#glow_effect_bilingual_c2)"
+        opacity="0.88"/>
+
+  <!-- Mark: Center node -->
+  <circle cx="157" cy="90" r="2"
+          fill="#00D9D9"
+          filter="url(#glow_effect_bilingual_c2)"
+          opacity="0.85"/>
+
+  <!-- English text on right side -->
+  <text x="380" y="130"
+        font-family="Poppins, sans-serif"
+        font-size="64"
+        font-weight="700"
+        fill="#0099B3"
+        letter-spacing="3">TRIAD</text>
+
+  <text x="380" y="170"
+        font-family="Poppins, sans-serif"
+        font-size="17"
+        font-weight="600"
+        fill="#00D9D9"
+        letter-spacing="1.5">THERAPEUTIC CLINIC</text>
+
+  <!-- Arabic text on far right side (RTL) -->
+  <text x="1080" y="130"
+        font-family="Cairo, sans-serif"
+        font-size="58"
+        font-weight="700"
+        text-anchor="end"
+        fill="#0099B3"
+        letter-spacing="2.5">ترياد</text>
+
+  <text x="1080" y="170"
+        font-family="Cairo, sans-serif"
+        font-size="17"
+        font-weight="600"
+        text-anchor="end"
+        fill="#00D9D9"
+        letter-spacing="1.5">العيادة العلاجية</text>
+
+  <!-- Divider line -->
+  <line x1="730" y1="60" x2="730" y2="220"
+        stroke="#00D9D9"
+        stroke-width="1"
+        opacity="0.2"
+        stroke-dasharray="3,2"/>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="grad3_primary_icon" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1E9B97;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D4D4A;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="grad3_secondary_icon" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#8FFCE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4DB8A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F7A6B;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="grad3_accent_icon" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFB88C;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E8845D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B84420;stop-opacity:1" />
+    </radialGradient>
+
+    <filter id="soft_glow_c3_icon">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soft_shadow_icon">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="0.75" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.08" result="offsetcolor"/>
+      <feComposite in="offsetcolor" in2="offsetblur" operator="in" result="offsetblur"/>
+      <feMerge>
+        <feMergeNode in="offsetblur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Top-left organic form (care) -->
+  <path d="M 65 55 Q 50 65 57 90 Q 65 105 80 105 Q 92 105 95 92 Q 98 75 88 62 Q 78 50 65 55 Z"
+        fill="url(#grad3_primary_icon)"
+        filter="url(#soft_shadow_icon)"
+        opacity="0.85"/>
+
+  <!-- Top-right organic form (healing) -->
+  <path d="M 125 60 Q 148 50 143 83 Q 138 105 120 111 Q 102 115 95 92 Q 88 76 103 65 Q 118 52 125 60 Z"
+        fill="url(#grad3_accent_icon)"
+        filter="url(#soft_shadow_icon)"
+        opacity="0.82"/>
+
+  <!-- Bottom center organic form (growth) -->
+  <path d="M 95 100 Q 72 120 82 148 Q 105 165 128 161 Q 145 158 137 130 Q 130 105 108 102 Q 98 100 95 100 Z"
+        fill="url(#grad3_secondary_icon)"
+        filter="url(#soft_shadow_icon)"
+        opacity="0.83"/>
+
+  <!-- Connecting threads -->
+  <path d="M 82 88 Q 90 95 105 105"
+        fill="none"
+        stroke="#3EEAE8"
+        stroke-width="1"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <path d="M 105 88 Q 98 95 90 105"
+        fill="none"
+        stroke="#FFB88C"
+        stroke-width="1"
+        opacity="0.35"
+        stroke-linecap="round"/>
+
+  <!-- Center focal point -->
+  <circle cx="95" cy="95" r="2"
+          fill="#3EEAE8"
+          filter="url(#soft_glow_c3_icon)"
+          opacity="0.7"/>
+</svg>
