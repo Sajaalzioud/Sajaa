@@ -1,0 +1,170 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    </style>
+
+    <linearGradient id="bc_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFBFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F3F5;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="bc_accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:0.15;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:0" />
+    </linearGradient>
+
+    <filter id="bc_shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="50"
+        font-family="Lora, serif"
+        font-size="44"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">BUSINESS CARD MOCKUP</text>
+
+  <text x="600" y="90"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        text-anchor="middle"
+        fill="#666">Standard 3.5" × 2" (89mm × 51mm) - Front & Back View</text>
+
+  <!-- Front of card -->
+  <g filter="url(#bc_shadow)">
+    <rect x="100" y="150" width="380" height="240" fill="url(#bc_bg)" stroke="#DDD" stroke-width="1" rx="4"/>
+
+    <!-- Accent bar on left -->
+    <rect x="100" y="150" width="8" height="240" fill="#2B9B8F"/>
+
+    <!-- Logo mark (simplified) -->
+    <circle cx="150" cy="200" r="20" fill="none" stroke="#2B9B8F" stroke-width="2" opacity="0.8"/>
+
+    <!-- Company name -->
+    <text x="200" y="210"
+          font-family="Lora, serif"
+          font-size="22"
+          font-weight="700"
+          fill="#1F5F5A"
+          letter-spacing="1">TRIAD</text>
+
+    <!-- Subtitle -->
+    <text x="200" y="230"
+          font-family="Inter, sans-serif"
+          font-size="10"
+          fill="#2B9B8F"
+          letter-spacing="0.5">THERAPEUTIC CLINIC</text>
+
+    <!-- Contact details -->
+    <line x1="120" y1="250" x2="460" y2="250" stroke="#2B9B8F" stroke-width="0.5" opacity="0.3"/>
+
+    <text x="120" y="270"
+          font-family="Inter, sans-serif"
+          font-size="9"
+          fill="#333">Dr. Sarah Johnson</text>
+
+    <text x="120" y="285"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#666">Clinical Director</text>
+
+    <text x="120" y="305"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#666">+966 12 345 6789</text>
+
+    <text x="120" y="320"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#666">info@triadclinic.com</text>
+
+    <text x="120" y="335"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#666">www.triadclinic.com</text>
+
+    <text x="120" y="355"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#999">Riyadh, Saudi Arabia</text>
+  </g>
+
+  <!-- Back of card -->
+  <g filter="url(#bc_shadow)">
+    <rect x="570" y="150" width="380" height="240" fill="#FFFFFF" stroke="#DDD" stroke-width="1" rx="4"/>
+
+    <!-- Accent bar on left -->
+    <rect x="570" y="150" width="8" height="240" fill="#2B9B8F"/>
+
+    <!-- Logo mark -->
+    <circle cx="620" cy="200" r="20" fill="none" stroke="#2B9B8F" stroke-width="2" opacity="0.8"/>
+
+    <!-- Clinic details -->
+    <text x="660" y="215"
+          font-family="Lora, serif"
+          font-size="14"
+          font-weight="600"
+          fill="#1F5F5A">Clinic Services:</text>
+
+    <text x="660" y="235"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#333">• Rehabilitation & Recovery
+• Physical Therapy
+• Therapeutic Support
+• Holistic Wellness
+• Personalized Care Plans</text>
+
+    <line x1="590" y1="265" x2="930" y2="265" stroke="#2B9B8F" stroke-width="0.5" opacity="0.3"/>
+
+    <text x="590" y="285"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          fill="#666" font-weight="600">Hours: Sat-Thu 8AM-6PM | Fri Closed
+Emergency: 24/7 Available</text>
+
+    <!-- Location -->
+    <text x="590" y="310"
+          font-family="Inter, sans-serif"
+          font-size="7"
+          fill="#999">Medical Center District, Riyadh, Kingdom of Saudi Arabia</text>
+
+    <!-- QR code area (placeholder) -->
+    <rect x="820" y="175" width="90" height="90" fill="none" stroke="#2B9B8F" stroke-width="1" opacity="0.3"/>
+    <text x="865" y="230"
+          font-family="Inter, sans-serif"
+          font-size="8"
+          text-anchor="middle"
+          fill="#999">QR Code</text>
+  </g>
+
+  <!-- Specifications -->
+  <text x="100" y="500"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        font-weight="600"
+        fill="#333">SPECIFICATIONS:</text>
+
+  <text x="100" y="530"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        fill="#555">• Stock: 300gsm Matte Art Card with soft touch coating
+• Finish: Spot UV gloss on logo areas for premium feel
+• Size: 3.5" × 2" (89mm × 51mm) - Standard business card
+• Colors: Gradient teal with white background
+• Typography: Lora (brand name), Inter (details)
+• Print: Full bleed with 0.125" margin
+• Quantity: 500-piece minimum for professional printing
+• Lead Time: 7-10 business days
+• Cost: $180-250 per 500 cards (including design)</text>
+
+  <text x="100" y="740"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#999">Mockup shows Concept 1 (Elegant & Luxury) with professional healthcare positioning</text>
+</svg>

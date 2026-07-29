@@ -1,0 +1,187 @@
+<svg viewBox="0 0 1600 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+    </style>
+
+    <linearGradient id="social_hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="800" y="50"
+        font-family="Lora, serif"
+        font-size="40"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">SOCIAL MEDIA MOCKUP</text>
+
+  <text x="800" y="90"
+        font-family="Inter, sans-serif"
+        font-size="13"
+        text-anchor="middle"
+        fill="#666">Profile Picture (400×400px) and Cover Photo (1200×630px)</text>
+
+  <!-- Profile Picture -->
+  <text x="400" y="160"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#333">Profile Picture (400×400px)</text>
+
+  <!-- Profile background -->
+  <rect x="200" y="190" width="400" height="400" fill="url(#social_hero)" stroke="none" rx="60"/>
+
+  <!-- Logo mark in profile -->
+  <circle cx="400" cy="390" r="70" fill="none" stroke="#FFFFFF" stroke-width="6" opacity="0.9"/>
+
+  <text x="400" y="410"
+        font-family="Lora, serif"
+        font-size="12"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        opacity="0.7">TRIAD</text>
+
+  <!-- Cover Photo Section -->
+  <text x="1200" y="160"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#333">Cover Photo (1200×630px)</text>
+
+  <!-- Cover background -->
+  <rect x="800" y="190" width="800" height="400" fill="url(#social_hero)" stroke="none"/>
+
+  <!-- Left accent elements -->
+  <circle cx="900" cy="280" r="50" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <circle cx="850" cy="350" r="30" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+
+  <!-- Center content in cover -->
+  <circle cx="1200" cy="320" r="80" fill="none" stroke="#FFFFFF" stroke-width="6" opacity="0.85"/>
+  <circle cx="1200" cy="320" r="60" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+
+  <!-- Right text in cover -->
+  <text x="1380" y="300"
+        font-family="Lora, serif"
+        font-size="48"
+        font-weight="700"
+        text-anchor="end"
+        fill="#FFFFFF"
+        letter-spacing="2">TRIAD</text>
+
+  <text x="1380" y="340"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        font-weight="600"
+        text-anchor="end"
+        fill="#FFFFFF"
+        opacity="0.9">Your Wellness Partner</text>
+
+  <!-- Right accent elements -->
+  <circle cx="1450" cy="270" r="35" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+
+  <!-- Profile Section Mockup -->
+  <text x="100" y="700"
+        font-family="Lora, serif"
+        font-size="28"
+        font-weight="700"
+        fill="#1F5F5A"
+        letter-spacing="1">Social Media Profile Layout Example</text>
+
+  <!-- Facebook/LinkedIn Profile -->
+  <rect x="50" y="750" width="700" height="550" fill="#FFFFFF" stroke="#DDD" stroke-width="2" rx="8"/>
+
+  <!-- Profile header area -->
+  <rect x="50" y="750" width="700" height="200" fill="url(#social_hero)"/>
+
+  <!-- Profile picture in profile -->
+  <circle cx="120" cy="800" r="60" fill="#E8E8E8" stroke="#FFF" stroke-width="4"/>
+
+  <!-- Profile name -->
+  <text x="200" y="820"
+        font-family="Lora, serif"
+        font-size="28"
+        font-weight="700"
+        fill="#1F5F5A">TRIAD Clinic</text>
+
+  <text x="200" y="850"
+        font-family="Inter, sans-serif"
+        font-size="12"
+        fill="#2B9B8F">Healthcare • Rehabilitation • Wellness</text>
+
+  <text x="200" y="870"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        fill="#666">Medical Center District, Riyadh | 12.5K Followers</text>
+
+  <!-- Follow button -->
+  <rect x="600" y="810" width="110" height="40" fill="url(#social_hero)" rx="20"/>
+  <text x="655" y="835"
+        font-family="Inter, sans-serif"
+        font-size="12"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#FFFFFF">Follow</text>
+
+  <!-- Profile description -->
+  <text x="70" y="920"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        fill="#333">Welcome to TRIAD Therapeutic Clinic. We specialize in comprehensive rehabilitation and wellness care.
+Your health is our priority. 💚</text>
+
+  <!-- Links -->
+  <text x="70" y="970"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        fill="#2B9B8F" font-weight="600">🌐 www.triadclinic.com | 📞 +966 12 345 6789</text>
+
+  <!-- Sample posts area -->
+  <text x="70" y="1015"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        font-weight="600"
+        fill="#333">Recent Posts</text>
+
+  <!-- Post 1 -->
+  <rect x="70" y="1035" width="660" height="200" fill="#F8FAFB" stroke="#E0E0E0" stroke-width="1" rx="4"/>
+  <rect x="70" y="1035" width="660" height="140" fill="#D4DFE3"/>
+  <text x="400" y="1110"
+        font-family="Inter, sans-serif"
+        font-size="12"
+        text-anchor="middle"
+        fill="#999">Post Image</text>
+
+  <text x="85" y="1190"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        font-weight="600"
+        fill="#333">Celebrating Patient Recovery Stories</text>
+
+  <!-- Right column - Instagram/TikTok -->
+  <rect x="850" y="750" width="700" height="550" fill="#FFFFFF" stroke="#DDD" stroke-width="2" rx="8"/>
+
+  <!-- Grid of posts -->
+  <rect x="870" y="800" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="1100" y="800" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="1330" y="800" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+
+  <rect x="870" y="1030" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="1100" y="1030" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+  <rect x="1330" y="1030" width="210" height="210" fill="#D4DFE3" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- Specifications -->
+  <text x="50" y="1380"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        font-weight="600"
+        fill="#333">KEY DIMENSIONS: Profile Picture (400×400px min) | Cover Photo (1200×630px) | Post Image (1080×1080px) | Stories (1080×1920px) | Ads (1200×628px, 1200×1500px, 600×800px)</text>
+</svg>

@@ -1,0 +1,182 @@
+<svg viewBox="0 0 1400 1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+
+    <linearGradient id="wall_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="wall_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F7F8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8EEF0;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="wall_shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="50"
+        font-family="Lora, serif"
+        font-size="44"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">CLINIC RECEPTION WALL MOCKUP</text>
+
+  <text x="700" y="95"
+        font-family="Inter, sans-serif"
+        font-size="14"
+        text-anchor="middle"
+        fill="#666">Large Scale Vinyl Installation - 6 Feet Tall × 8 Feet Wide Wall Display</text>
+
+  <!-- Reception wall background -->
+  <rect x="50" y="140" width="1300" height="1150" fill="url(#wall_bg)" stroke="#CCC" stroke-width="2"/>
+
+  <!-- Main wall graphic section with gradient -->
+  <rect x="50" y="140" width="1300" height="700" fill="url(#wall_gradient)" filter="url(#wall_shadow)"/>
+
+  <!-- Large logo mark - left side -->
+  <g opacity="0.15" transform="translate(-50, -50)">
+    <circle cx="400" cy="350" r="300" fill="none" stroke="#FFFFFF" stroke-width="20"/>
+  </g>
+
+  <!-- Main decorative circles -->
+  <circle cx="200" cy="250" r="80" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.3"/>
+  <circle cx="1200" cy="600" r="120" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.2"/>
+
+  <!-- Main logo mark - centered and prominent -->
+  <circle cx="700" cy="350" r="140" fill="none" stroke="#FFFFFF" stroke-width="10" opacity="0.9" filter="url(#wall_shadow)"/>
+  <circle cx="700" cy="350" r="100" fill="none" stroke="#FFFFFF" stroke-width="6" opacity="0.5"/>
+  <circle cx="700" cy="350" r="60" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3"/>
+
+  <!-- Main text - centered on wall -->
+  <text x="700" y="520"
+        font-family="Lora, serif"
+        font-size="120"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        letter-spacing="6"
+        filter="url(#wall_shadow)">TRIAD</text>
+
+  <!-- Subtitle -->
+  <text x="700" y="600"
+        font-family="Inter, sans-serif"
+        font-size="32"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+
+  <!-- Lower section with clinic information -->
+  <rect x="50" y="840" width="1300" height="450" fill="#FFFFFF"/>
+
+  <!-- Welcome message -->
+  <text x="700" y="920"
+        font-family="Lora, serif"
+        font-size="44"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="2">Welcome to TRIAD</text>
+
+  <text x="700" y="980"
+        font-family="Inter, sans-serif"
+        font-size="18"
+        text-anchor="middle"
+        fill="#2B9B8F"
+        letter-spacing="1">Your Premier Therapeutic Healthcare Partner</text>
+
+  <!-- Three column layout for services -->
+  <!-- Column 1 -->
+  <g>
+    <circle cx="250" cy="1100" r="40" fill="none" stroke="#2B9B8F" stroke-width="3" opacity="0.8"/>
+    <text x="250" y="1180"
+          font-family="Lora, serif"
+          font-size="20"
+          font-weight="700"
+          text-anchor="middle"
+          fill="#1F5F5A">Expert Care</text>
+    <text x="250" y="1230"
+          font-family="Inter, sans-serif"
+          font-size="12"
+          text-anchor="middle"
+          fill="#555"
+          xml:space="preserve">Experienced healthcare
+professionals dedicated
+to your recovery</text>
+  </g>
+
+  <!-- Column 2 -->
+  <g>
+    <circle cx="700" cy="1100" r="40" fill="none" stroke="#2B9B8F" stroke-width="3" opacity="0.8"/>
+    <text x="700" y="1180"
+          font-family="Lora, serif"
+          font-size="20"
+          font-weight="700"
+          text-anchor="middle"
+          fill="#1F5F5A">Holistic Support</text>
+    <text x="700" y="1230"
+          font-family="Inter, sans-serif"
+          font-size="12"
+          text-anchor="middle"
+          fill="#555"
+          xml:space="preserve">Comprehensive care
+addressing physical,
+mental, and emotional wellness</text>
+  </g>
+
+  <!-- Column 3 -->
+  <g>
+    <circle cx="1150" cy="1100" r="40" fill="none" stroke="#2B9B8F" stroke-width="3" opacity="0.8"/>
+    <text x="1150" y="1180"
+          font-family="Lora, serif"
+          font-size="20"
+          font-weight="700"
+          text-anchor="middle"
+          fill="#1F5F5A">Patient Focused</text>
+    <text x="1150" y="1230"
+          font-family="Inter, sans-serif"
+          font-size="12"
+          text-anchor="middle"
+          fill="#555"
+          xml:space="preserve">Your wellness journey
+is our top priority
+every single day</text>
+  </g>
+
+  <!-- Call to action -->
+  <rect x="300" y="1310" width="800" height="60" fill="url(#wall_gradient)" rx="8" filter="url(#wall_shadow)"/>
+  <text x="700" y="1350"
+        font-family="Inter, sans-serif"
+        font-size="24"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#FFFFFF">📞 Schedule Your Appointment: +966 12 345 6789</text>
+
+  <!-- Specifications box -->
+  <text x="50" y="1730"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="600"
+        fill="#333">SPECIFICATIONS:</text>
+
+  <text x="50" y="1760"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        fill="#555">• Size: 6 feet tall × 8 feet wide (1.8m × 2.4m) - Large-scale wall installation
+• Material: High-quality vinyl with matte finish to reduce glare
+• Installation: Professional mounting on clinic reception wall
+• Design: Full-color gradient background with white vinyl cutout elements
+• Durability: UV-resistant, fade-proof, anti-glare coating
+• Maintenance: Easy to clean, suitable for clinic hygiene standards
+• Impact: Creates welcoming, premium first impression for arriving patients
+• Customization: Can be adapted for different wall dimensions (6'×6', 8'×10', etc.)</text>
+</svg>

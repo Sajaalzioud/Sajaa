@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+    </style>
+
+    <!-- Building facade background -->
+    <linearGradient id="building_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8EFF1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4DFE3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Signage background -->
+    <linearGradient id="signage_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFBFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F3F5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Signage shadow -->
+    <filter id="building_shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Typography -->
+    <linearGradient id="logo_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="80"
+        font-family="Lora, serif"
+        font-size="48"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="2">BUILDING SIGNAGE MOCKUP</text>
+
+  <text x="600" y="130"
+        font-family="Lora, serif"
+        font-size="22"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#666"
+        letter-spacing="0.5">3D Dimensional Letters - Clinic Entrance</text>
+
+  <!-- Building facade -->
+  <rect x="0" y="160" width="1200" height="1440" fill="url(#building_bg)" stroke="#BBB" stroke-width="1"/>
+
+  <!-- Building details -->
+  <circle cx="150" cy="300" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="150" cy="400" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="150" cy="500" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="150" cy="900" r="20" fill="#87CEEB" opacity="0.3"/>
+
+  <circle cx="1050" cy="300" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="1050" cy="400" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="1050" cy="500" r="20" fill="#87CEEB" opacity="0.3"/>
+  <circle cx="1050" cy="900" r="20" fill="#87CEEB" opacity="0.3"/>
+
+  <!-- Entrance door -->
+  <rect x="400" y="1100" width="400" height="500" fill="#8B7355" stroke="#654321" stroke-width="2"/>
+  <circle cx="750" cy="1350" r="8" fill="#FFD700"/>
+
+  <!-- Main signage area -->
+  <rect x="250" y="450" width="700" height="400" fill="url(#signage_bg)" stroke="#AAA" stroke-width="2" filter="url(#building_shadow)"/>
+
+  <!-- 3D shadow effect for dimensional letters -->
+  <g opacity="0.15" transform="translate(8, 8)">
+    <!-- Large dimensional letters "TRIAD" with shadow -->
+    <text x="600" y="720"
+          font-family="Lora, serif"
+          font-size="180"
+          font-weight="700"
+          text-anchor="middle"
+          fill="#000000">TRIAD</text>
+  </g>
+
+  <!-- Main dimensional text with gradient -->
+  <defs>
+    <linearGradient id="letter_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <text x="600" y="715"
+        font-family="Lora, serif"
+        font-size="180"
+        font-weight="700"
+        text-anchor="middle"
+        fill="url(#letter_gradient)"
+        stroke="#1F5F5A"
+        stroke-width="1"
+        letter-spacing="8">TRIAD</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="810"
+        font-family="Lora, serif"
+        font-size="32"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#2B9B8F"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+
+  <!-- Decorative line -->
+  <line x1="300" y1="835" x2="900" y2="835"
+        stroke="#2B9B8F"
+        stroke-width="2"
+        opacity="0.5"/>
+
+  <!-- Small logo mark on signage -->
+  <!-- Stylized mark -->
+  <circle cx="280" cy="580" r="35" fill="none" stroke="#2B9B8F" stroke-width="3" opacity="0.6"/>
+
+  <!-- Specifications -->
+  <text x="100" y="1300"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        font-weight="600"
+        fill="#333">SPECIFICATIONS:</text>
+
+  <text x="100" y="1340"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#555">• Material: Brushed Aluminum 3D Letters
+• Dimensions: 6 feet width × 2.5 feet height
+• LED Backlit: Optional warm white lighting
+• Mounting: Direct wall mount with hidden brackets
+• Color: Gradient teal with dimensional depth
+• Lighting: Day/night visibility optimized
+• Installation: Professional mounting required</text>
+
+  <text x="100" y="1520"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        fill="#999">Mockup shows Concept 1 (Elegant & Luxury) dimensional signage treatment</text>
+</svg>

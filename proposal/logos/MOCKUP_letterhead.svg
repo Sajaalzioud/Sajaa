@@ -1,0 +1,164 @@
+<svg viewBox="0 0 1000 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    </style>
+
+    <linearGradient id="letter_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFBFC;stop-opacity:1" />
+      <stop offset="5%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="40"
+        font-family="Lora, serif"
+        font-size="40"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">LETTERHEAD MOCKUP</text>
+
+  <text x="500" y="75"
+        font-family="Inter, sans-serif"
+        font-size="14"
+        text-anchor="middle"
+        fill="#666">Standard 8.5" × 11" (216mm × 279mm) - Professional Medical Letterhead</text>
+
+  <!-- Paper -->
+  <rect x="50" y="110" width="900" height="1240" fill="url(#letter_bg)" stroke="#CCC" stroke-width="1"/>
+
+  <!-- Top header section with gradient accent -->
+  <rect x="50" y="110" width="900" height="150" fill="none" stroke-bottom="1px solid #E8E8E8"/>
+
+  <!-- Header accent bar -->
+  <rect x="50" y="110" width="900" height="4" fill="#2B9B8F" opacity="0.8"/>
+
+  <!-- Logo on left -->
+  <g transform="translate(70, 125)">
+    <!-- Simplified circular logo -->
+    <circle cx="30" cy="30" r="25" fill="none" stroke="#2B9B8F" stroke-width="2" opacity="0.9"/>
+    <circle cx="30" cy="30" r="15" fill="none" stroke="#2B9B8F" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Organization info on right -->
+  <text x="850" y="140"
+        font-family="Lora, serif"
+        font-size="24"
+        font-weight="700"
+        text-anchor="end"
+        fill="#1F5F5A"
+        letter-spacing="2">TRIAD</text>
+
+  <text x="850" y="163"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        font-weight="600"
+        text-anchor="end"
+        fill="#2B9B8F"
+        letter-spacing="0.5">THERAPEUTIC CLINIC</text>
+
+  <text x="850" y="182"
+        font-family="Inter, sans-serif"
+        font-size="9"
+        text-anchor="end"
+        fill="#666">Medical Center District
+Riyadh, Saudi Arabia
+Tel: +966 12 345 6789
+www.triadclinic.com</text>
+
+  <!-- Main content area -->
+  <text x="70" y="290"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        fill="#333">Dear Patient,</text>
+
+  <text x="70" y="330"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        fill="#555"
+        xml:space="preserve">Thank you for choosing TRIAD Therapeutic Clinic for your healthcare and rehabilitation needs.
+
+We are committed to providing you with the highest quality therapeutic care and support.
+Our multidisciplinary team of experienced professionals is dedicated to your recovery and
+well-being.
+
+This letter confirms your appointment details and treatment plan. Please review the
+information carefully and contact us if you have any questions.</text>
+
+  <!-- Appointment box -->
+  <rect x="70" y="470" width="860" height="140" fill="#F8FAFB" stroke="#D0D0D0" stroke-width="1" rx="3"/>
+
+  <text x="90" y="495"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        font-weight="600"
+        fill="#1F5F5A">APPOINTMENT DETAILS:</text>
+
+  <text x="90" y="520"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        fill="#333">Patient Name: ________________________     Date: ________________
+Specialist: ________________________     Time: ________________
+Treatment Type: ________________________     Location: ________________</text>
+
+  <text x="90" y="570"
+        font-family="Inter, sans-serif"
+        font-size="9"
+        fill="#666">Special Instructions: Please arrive 15 minutes early. Bring all relevant medical documents.
+For cancellations, contact us at least 24 hours in advance.</text>
+
+  <!-- Main body continued -->
+  <text x="70" y="650"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        fill="#555">We look forward to supporting you on your path to recovery and wellness.
+
+Warm regards,</text>
+
+  <!-- Signature area -->
+  <text x="70" y="740"
+        font-family="Lora, serif"
+        font-size="14"
+        font-weight="600"
+        fill="#1F5F5A">________________________
+Dr. Sarah Johnson
+Clinical Director, TRIAD Therapeutic Clinic</text>
+
+  <!-- Footer -->
+  <line x1="50" y1="1250" x2="950" y2="1250" stroke="#2B9B8F" stroke-width="1" opacity="0.3"/>
+
+  <text x="500" y="1275"
+        font-family="Inter, sans-serif"
+        font-size="9"
+        text-anchor="middle"
+        fill="#999">TRIAD Therapeutic Clinic | Medical Center District, Riyadh, Saudi Arabia
+Tel: +966 12 345 6789 | Email: info@triadclinic.com | www.triadclinic.com</text>
+
+  <text x="500" y="1295"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#BBB">License No: MOH-2024-RC-12345 | VAT ID: 300000000000003</text>
+
+  <!-- Specifications outside the mockup -->
+  <text x="50" y="1350"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="600"
+        fill="#333">SPECIFICATIONS:</text>
+
+  <text x="50" y="1370"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        fill="#555">• Paper: 100gsm Bright White A4 (8.5" × 11")
+• Header: 4pt accent bar in brand teal
+• Logo: Positioned top-left with clinic info top-right
+• Typography: Lora (headers), Inter (body text)
+• Layout: Professional medical format with appointment section
+• Footer: Contact info and registration details
+• Print: Full color with process cyan, magenta, yellow, black
+• Quantity: 250-500 sheet minimum</text>
+</svg>

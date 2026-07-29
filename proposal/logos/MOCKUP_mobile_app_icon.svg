@@ -1,0 +1,213 @@
+<svg viewBox="0 0 1400 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    </style>
+
+    <radialGradient id="app_icon_gradient" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </radialGradient>
+
+    <filter id="app_shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="50"
+        font-family="Lora, serif"
+        font-size="40"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">MOBILE APP ICON MOCKUP</text>
+
+  <text x="700" y="90"
+        font-family="Inter, sans-serif"
+        font-size="13"
+        text-anchor="middle"
+        fill="#666">iOS (180px) × Android (192px) - App Store Ready Icons</text>
+
+  <!-- iOS Icon (left) -->
+  <text x="280" y="170"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#333">iOS App Icon (180×180px)</text>
+
+  <!-- iOS background -->
+  <rect x="120" y="200" width="320" height="320" fill="url(#app_icon_gradient)" stroke="none" rx="60" filter="url(#app_shadow)"/>
+
+  <!-- Logo mark in center -->
+  <circle cx="280" cy="360" r="60" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.85"/>
+  <circle cx="280" cy="360" r="40" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>
+
+  <!-- iOS specifications -->
+  <text x="280" y="580"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">Dimensions: 180×180px</text>
+
+  <text x="280" y="600"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        fill="#666">Corner Radius: 60px (full rounded)
+Format: PNG with transparency
+Safe Area: 20px margin from edge</text>
+
+  <!-- Android Icon (middle-right) -->
+  <text x="900" y="170"
+        font-family="Inter, sans-serif"
+        font-size="16"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#333">Android App Icon (192×192px)</text>
+
+  <!-- Android background -->
+  <rect x="740" y="200" width="320" height="320" fill="url(#app_icon_gradient)" stroke="none" rx="52" filter="url(#app_shadow)"/>
+
+  <!-- Logo mark in center -->
+  <circle cx="900" cy="360" r="65" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.85"/>
+  <circle cx="900" cy="360" r="45" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>
+
+  <!-- Android specifications -->
+  <text x="900" y="580"
+        font-family="Inter, sans-serif"
+        font-size="11"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">Dimensions: 192×192px</text>
+
+  <text x="900" y="600"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        fill="#666">Adaptive Icon: 108×108px focus area
+Format: PNG with transparency
+Safe Area: 24px margin from edge</text>
+
+  <!-- Size Variations Section -->
+  <text x="700" y="720"
+        font-family="Lora, serif"
+        font-size="28"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="1">Common Size Variations</text>
+
+  <!-- Size row 1 -->
+  <rect x="150" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="190" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="190" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">29×29px</text>
+  <text x="190" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">iOS Watch</text>
+
+  <rect x="310" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="350" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="350" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">40×40px</text>
+  <text x="350" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">iOS Spotlight</text>
+
+  <rect x="470" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="510" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="510" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">60×60px</text>
+  <text x="510" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">iOS Settings</text>
+
+  <rect x="630" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="670" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="670" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">120×120px</text>
+  <text x="670" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">iPad Home</text>
+
+  <rect x="790" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="830" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="830" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">180×180px</text>
+  <text x="830" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">iOS Home</text>
+
+  <rect x="950" y="780" width="80" height="80" fill="url(#app_icon_gradient)" rx="18"/>
+  <circle cx="990" cy="820" r="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="990" y="890"
+        font-family="Inter, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        font-weight="600"
+        fill="#333">192×192px</text>
+  <text x="990" y="905"
+        font-family="Inter, sans-serif"
+        font-size="8"
+        text-anchor="middle"
+        fill="#666">Android Home</text>
+
+  <!-- Design Guidelines Section -->
+  <text x="100" y="1010"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="600"
+        fill="#333">DESIGN GUIDELINES:</text>
+
+  <text x="100" y="1040"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        fill="#555">✓ Solid color background with geometric logo mark
+✓ Rounded corners for modern app aesthetic
+✓ High contrast icon mark for visibility at small sizes
+✓ Safe area: minimum 10% padding on all sides
+✓ No text labels within app icon (use app name separately)
+✓ Scalable to all required sizes without detail loss
+✓ Works in both light and dark modes
+✓ Meets Apple App Store and Google Play Store requirements</text>
+
+  <text x="100" y="1150"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        fill="#999">Mockup shows Concept 3 (Human-Centred & Warm) gradient for friendly, approachable app experience</text>
+</svg>
