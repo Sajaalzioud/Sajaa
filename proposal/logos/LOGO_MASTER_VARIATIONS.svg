@@ -1,0 +1,212 @@
+<svg viewBox="0 0 2000 2400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&Poppins:wght@600;700&Inter:wght@600;700&display=swap');
+    </style>
+
+    <!-- Concept 1 Gradients -->
+    <linearGradient id="c1_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Concept 2 Gradients -->
+    <linearGradient id="c2_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Concept 3 Gradients -->
+    <radialGradient id="c3_grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1E9B97;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D4D4A;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Shadow filters -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2000" height="2400" fill="#FAFAF8"/>
+
+  <!-- ============== CONCEPT 1: ELEGANT & LUXURY ============== -->
+  <text x="100" y="50" font-family="Lora, serif" font-size="28" font-weight="700" fill="#1F5F5A">Concept 1: Elegant & Luxury</text>
+  <line x1="100" y1="70" x2="400" y2="70" stroke="#2B9B8F" stroke-width="2"/>
+
+  <!-- C1 - Icon Mark -->
+  <g transform="translate(100, 100)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Coloured)</text>
+    <path d="M 40 80 Q 80 50, 120 80" fill="none" stroke="url(#c1_grad)" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 30 50 Q 80 20, 130 50" fill="none" stroke="url(#c1_grad)" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 20 20 Q 80 -10, 140 20" fill="none" stroke="url(#c1_grad)" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <circle cx="80" cy="20" r="3" fill="#2B9B8F" opacity="0.6"/>
+  </g>
+
+  <!-- C1 - Black version -->
+  <g transform="translate(300, 100)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Black)</text>
+    <path d="M 40 80 Q 80 50, 120 80" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 30 50 Q 80 20, 130 50" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 20 20 Q 80 -10, 140 20" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round" filter="url(#shadow)"/>
+    <circle cx="80" cy="20" r="3" fill="#000000" opacity="0.7"/>
+  </g>
+
+  <!-- C1 - White version (on colored background) -->
+  <g transform="translate(500, 100)">
+    <rect x="-10" y="-30" width="150" height="130" fill="#2B9B8F" rx="5"/>
+    <text x="65" y="-20" font-family="Arial" font-size="12" fill="#FFF" text-anchor="middle">Icon Mark (White)</text>
+    <path d="M 40 80 Q 80 50, 120 80" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 30 50 Q 80 20, 130 50" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 20 20 Q 80 -10, 140 20" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="80" cy="20" r="3" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- C1 - Horizontal Layout -->
+  <g transform="translate(100, 280)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Horizontal Layout (Colored)</text>
+    <!-- Mark -->
+    <path d="M 10 60 Q 40 40, 60 60" fill="none" stroke="url(#c1_grad)" stroke-width="6" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 5 40 Q 40 20, 65 40" fill="none" stroke="url(#c1_grad)" stroke-width="6" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 0 20 Q 40 -5, 70 20" fill="none" stroke="url(#c1_grad)" stroke-width="6" stroke-linecap="round" filter="url(#shadow)"/>
+    <!-- Text -->
+    <text x="85" y="50" font-family="Lora, serif" font-size="32" font-weight="700" fill="#1F5F5A">TRIAD</text>
+    <text x="85" y="70" font-family="Lora, serif" font-size="11" font-weight="400" fill="#2B9B8F">THERAPEUTIC CLINIC</text>
+  </g>
+
+  <!-- C1 - Stacked Layout -->
+  <g transform="translate(400, 280)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Stacked Layout (Colored)</text>
+    <!-- Mark -->
+    <path d="M 15 20 Q 40 5, 65 20" fill="none" stroke="url(#c1_grad)" stroke-width="5" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 10 8 Q 40 -5, 70 8" fill="none" stroke="url(#c1_grad)" stroke-width="5" stroke-linecap="round" filter="url(#shadow)"/>
+    <path d="M 5 -4 Q 40 -18, 75 -4" fill="none" stroke="url(#c1_grad)" stroke-width="5" stroke-linecap="round" filter="url(#shadow)"/>
+    <!-- Text -->
+    <text x="40" y="55" font-family="Lora, serif" font-size="28" font-weight="700" fill="#1F5F5A" text-anchor="middle">TRIAD</text>
+    <text x="40" y="72" font-family="Lora, serif" font-size="10" font-weight="400" fill="#2B9B8F" text-anchor="middle">THERAPEUTIC CLINIC</text>
+  </g>
+
+  <!-- ============== CONCEPT 2: MODERN & INNOVATIVE ============== -->
+  <text x="100" y="450" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="#0099B3">Concept 2: Modern & Innovative</text>
+  <line x1="100" y1="470" x2="450" y2="470" stroke="#00D9D9" stroke-width="2"/>
+
+  <!-- C2 - Icon Mark Colored -->
+  <g transform="translate(100, 500)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Coloured)</text>
+    <path d="M 40 70 L 55 55 L 70 65 L 65 85 L 45 88 Z" fill="url(#c2_grad)"/>
+    <path d="M 70 65 L 90 50 L 105 62 L 100 90 L 75 95 Z" fill="#5FE3C0"/>
+    <path d="M 105 62 L 125 50 L 135 68 L 125 95 L 110 92 Z" fill="url(#c2_grad)"/>
+    <circle cx="90" cy="70" r="3" fill="#00D9D9" opacity="0.8"/>
+  </g>
+
+  <!-- C2 - Black Version -->
+  <g transform="translate(300, 500)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Black)</text>
+    <path d="M 40 70 L 55 55 L 70 65 L 65 85 L 45 88 Z" fill="#000000"/>
+    <path d="M 70 65 L 90 50 L 105 62 L 100 90 L 75 95 Z" fill="#333333"/>
+    <path d="M 105 62 L 125 50 L 135 68 L 125 95 L 110 92 Z" fill="#000000"/>
+    <circle cx="90" cy="70" r="3" fill="#000000" opacity="0.8"/>
+  </g>
+
+  <!-- C2 - Horizontal Layout -->
+  <g transform="translate(100, 680)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Horizontal Layout (Colored)</text>
+    <!-- Mark -->
+    <path d="M 15 50 L 25 42 L 35 48 L 32 62 L 20 64 Z" fill="url(#c2_grad)" filter="url(#glow)"/>
+    <path d="M 35 48 L 50 40 L 60 48 L 58 65 L 40 68 Z" fill="#5FE3C0" filter="url(#glow)"/>
+    <path d="M 60 48 L 72 42 L 78 54 L 72 68 L 62 66 Z" fill="url(#c2_grad)" filter="url(#glow)"/>
+    <!-- Text -->
+    <text x="95" y="55" font-family="Poppins, sans-serif" font-size="34" font-weight="700" fill="#0099B3">TRIAD</text>
+    <text x="95" y="72" font-family="Poppins, sans-serif" font-size="11" font-weight="600" fill="#00D9D9">THERAPEUTIC CLINIC</text>
+  </g>
+
+  <!-- ============== CONCEPT 3: HUMAN-CENTRED & WARM ============== -->
+  <text x="100" y="900" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#0D4D4A">Concept 3: Human-Centred & Warm</text>
+  <line x1="100" y1="920" x2="500" y2="920" stroke="#1E9B97" stroke-width="2"/>
+
+  <!-- C3 - Icon Mark Colored -->
+  <g transform="translate(100, 950)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Coloured)</text>
+    <path d="M 35 80 Q 20 88 28 115 Q 45 135 65 135 Q 80 135 83 115 Q 88 90 70 80 Q 55 75 35 80 Z" fill="url(#c3_grad)"/>
+    <path d="M 95 85 Q 125 75 120 110 Q 118 140 95 148 Q 70 152 60 125 Q 55 105 70 90 Q 85 80 95 85 Z" fill="#FFB88C"/>
+    <path d="M 65 135 Q 45 160 55 190 Q 75 210 95 208 Q 115 205 105 175 Q 100 150 75 140 Q 70 138 65 135 Z" fill="#8FFCE8"/>
+    <circle cx="75" cy="130" r="2" fill="#3EEAE8" opacity="0.7"/>
+  </g>
+
+  <!-- C3 - Black Version -->
+  <g transform="translate(300, 950)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Icon Mark (Black)</text>
+    <path d="M 35 80 Q 20 88 28 115 Q 45 135 65 135 Q 80 135 83 115 Q 88 90 70 80 Q 55 75 35 80 Z" fill="#1a1a1a"/>
+    <path d="M 95 85 Q 125 75 120 110 Q 118 140 95 148 Q 70 152 60 125 Q 55 105 70 90 Q 85 80 95 85 Z" fill="#333333"/>
+    <path d="M 65 135 Q 45 160 55 190 Q 75 210 95 208 Q 115 205 105 175 Q 100 150 75 140 Q 70 138 65 135 Z" fill="#1a1a1a"/>
+    <circle cx="75" cy="130" r="2" fill="#000000" opacity="0.7"/>
+  </g>
+
+  <!-- C3 - Horizontal Layout -->
+  <g transform="translate(100, 1130)">
+    <text x="0" y="-20" font-family="Arial" font-size="12" fill="#666">Horizontal Layout (Colored)</text>
+    <!-- Mark -->
+    <path d="M 12 60 Q 8 65 12 82 Q 22 95 35 95 Q 45 95 47 82 Q 50 68 40 62 Q 30 58 12 60 Z" fill="url(#c3_grad)"/>
+    <path d="M 53 63 Q 72 57 68 78 Q 67 98 53 104 Q 42 107 38 88 Q 36 73 48 66 Q 60 62 53 63 Z" fill="#FFB88C"/>
+    <!-- Text -->
+    <text x="85" y="82" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="#0D4D4A">TRIAD</text>
+    <text x="85" y="100" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1E9B97">THERAPEUTIC CLINIC</text>
+  </g>
+
+  <!-- ============== COLOR PALETTES ============== -->
+  <text x="100" y="1350" font-family="Arial" font-size="20" font-weight="700" fill="#1F5F5A">Color Palettes</text>
+
+  <!-- C1 Palette -->
+  <g transform="translate(100, 1380)">
+    <rect x="0" y="0" width="40" height="40" fill="#2B9B8F"/>
+    <text x="50" y="20" font-family="Arial" font-size="11" fill="#333">Primary: #2B9B8F</text>
+    <rect x="0" y="50" width="40" height="40" fill="#1F5F5A"/>
+    <text x="50" y="70" font-family="Arial" font-size="11" fill="#333">Dark: #1F5F5A</text>
+    <rect x="0" y="100" width="40" height="40" fill="#7FC9B8"/>
+    <text x="50" y="120" font-family="Arial" font-size="11" fill="#333">Accent: #7FC9B8</text>
+  </g>
+
+  <!-- C2 Palette -->
+  <g transform="translate(400, 1380)">
+    <rect x="0" y="0" width="40" height="40" fill="#00D9D9"/>
+    <text x="50" y="20" font-family="Arial" font-size="11" fill="#333">Primary: #00D9D9</text>
+    <rect x="0" y="50" width="40" height="40" fill="#0099B3"/>
+    <text x="50" y="70" font-family="Arial" font-size="11" fill="#333">Dark: #0099B3</text>
+    <rect x="0" y="100" width="40" height="40" fill="#5FE3C0"/>
+    <text x="50" y="120" font-family="Arial" font-size="11" fill="#333">Accent: #5FE3C0</text>
+  </g>
+
+  <!-- C3 Palette -->
+  <g transform="translate(700, 1380)">
+    <rect x="0" y="0" width="40" height="40" fill="#1E9B97"/>
+    <text x="50" y="20" font-family="Arial" font-size="11" fill="#333">Primary: #1E9B97</text>
+    <rect x="0" y="50" width="40" height="40" fill="#0D4D4A"/>
+    <text x="50" y="70" font-family="Arial" font-size="11" fill="#333">Dark: #0D4D4A</text>
+    <rect x="0" y="100" width="40" height="40" fill="#FFB88C"/>
+    <text x="50" y="120" font-family="Arial" font-size="11" fill="#333">Accent: #FFB88C</text>
+  </g>
+
+  <!-- ============== KEY GUIDELINES ============== -->
+  <text x="100" y="1600" font-family="Arial" font-size="20" font-weight="700" fill="#1F5F5A">Key Guidelines</text>
+
+  <text x="100" y="1640" font-family="Arial" font-size="12" font-weight="700" fill="#333">Clear Space: Minimum 10% of logo width</text>
+  <text x="100" y="1660" font-family="Arial" font-size="12" font-weight="700" fill="#333">Minimum Size: Print 1 inch, Digital 32px</text>
+  <text x="100" y="1680" font-family="Arial" font-size="12" font-weight="700" fill="#333">Minimum Size: Print 1 inch, Digital 32px</text>
+  <text x="100" y="1700" font-family="Arial" font-size="12" font-weight="700" fill="#333">DO NOT: Rotate, Skew, Change Aspect Ratio</text>
+  <text x="100" y="1720" font-family="Arial" font-size="12" font-weight="700" fill="#333">DO NOT: Use unauthorized colors</text>
+  <text x="100" y="1740" font-family="Arial" font-size="12" font-weight="700" fill="#333">DO NOT: Add effects like shadows without approval</text>
+
+  <text x="100" y="1800" font-family="Arial" font-size="14" font-weight="700" fill="#1F5F5A">Master Design Files Ready for Production</text>
+  <text x="100" y="1825" font-family="Arial" font-size="11" fill="#666">All variations can be exported as: SVG, PDF, PNG (transparent), 300 DPI</text>
+  <text x="100" y="1845" font-family="Arial" font-size="11" fill="#666">Ready for: Web, Print, Signage, Uniforms, Apps, Social Media</text>
+</svg>

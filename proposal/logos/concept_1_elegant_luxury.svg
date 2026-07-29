@@ -1,0 +1,92 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="grad1_c1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_c1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2B9B8F;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="shadow_c1">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <circle cx="250" cy="200" r="120" fill="url(#glow_c1)"/>
+
+  <!-- CONCEPT 1: ELEGANT & LUXURY -->
+  <!-- Three ascending flowing curves representing growth and integration -->
+
+  <!-- Base curve (foundation) -->
+  <path d="M 180 280 Q 250 240, 320 280"
+        fill="none"
+        stroke="url(#grad1_c1)"
+        stroke-width="12"
+        stroke-linecap="round"
+        filter="url(#shadow_c1)"
+        opacity="0.9"/>
+
+  <!-- Middle curve (growth) -->
+  <path d="M 170 240 Q 250 185, 330 240"
+        fill="none"
+        stroke="url(#grad1_c1)"
+        stroke-width="12"
+        stroke-linecap="round"
+        filter="url(#shadow_c1)"
+        opacity="0.95"/>
+
+  <!-- Top curve (ascension) -->
+  <path d="M 160 200 Q 250 130, 340 200"
+        fill="none"
+        stroke="url(#grad1_c1)"
+        stroke-width="12"
+        stroke-linecap="round"
+        filter="url(#shadow_c1)"
+        opacity="1"/>
+
+  <!-- Center focal point -->
+  <circle cx="250" cy="200" r="5" fill="#2B9B8F" opacity="0.6"/>
+
+  <!-- LOGO MARKS (Icon only - top half) -->
+  <!-- This SVG shows the mark in context. Full versions will be extracted -->
+
+  <!-- Text versions below (for reference) -->
+  <text x="250" y="380"
+        font-family="Lora, serif"
+        font-size="36"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="2">TRIAD</text>
+
+  <text x="250" y="420"
+        font-family="Lora, serif"
+        font-size="14"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#2B9B8F"
+        letter-spacing="1">THERAPEUTIC CLINIC</text>
+
+  <!-- Design notes -->
+  <text x="250" y="455"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        fill="#999">Concept 1: Elegant & Luxury</text>
+
+  <text x="250" y="470"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        text-anchor="middle"
+        fill="#AAA">Three ascending curves symbolize growth, healing, and integrated care</text>
+</svg>

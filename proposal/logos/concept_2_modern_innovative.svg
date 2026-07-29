@@ -1,0 +1,111 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="grad2_c2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad2_accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5FE3C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2FB89C;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="glow_c2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="glow_effect_c2">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glow background -->
+  <circle cx="250" cy="200" r="110" fill="url(#glow_c2)"/>
+
+  <!-- CONCEPT 2: MODERN & INNOVATIVE -->
+  <!-- Three interconnected geometric forms representing integrated healthcare systems -->
+
+  <!-- Left hexagon-like form -->
+  <path d="M 200 180 L 220 160 L 240 170 L 235 195 L 210 200 Z"
+        fill="url(#grad2_c2)"
+        filter="url(#glow_effect_c2)"
+        opacity="0.9"/>
+
+  <!-- Center hexagon-like form -->
+  <path d="M 240 170 L 270 150 L 290 165 L 285 200 L 250 210 Z"
+        fill="url(#grad2_accent)"
+        filter="url(#glow_effect_c2)"
+        opacity="0.95"/>
+
+  <!-- Right hexagon-like form -->
+  <path d="M 290 165 L 320 145 L 335 165 L 325 205 L 295 215 Z"
+        fill="url(#grad2_c2)"
+        filter="url(#glow_effect_c2)"
+        opacity="0.88"/>
+
+  <!-- Connecting lines showing integration -->
+  <line x1="240" y1="170" x2="270" y2="150"
+        stroke="#00D9D9"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="235" y1="195" x2="265" y2="185"
+        stroke="#5FE3C0"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="290" y1="165" x2="315" y2="155"
+        stroke="#00D9D9"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <!-- Center integration node -->
+  <circle cx="267" cy="175" r="4"
+          fill="#00D9D9"
+          filter="url(#glow_effect_c2)"
+          opacity="0.85"/>
+
+  <!-- Text -->
+  <text x="250" y="380"
+        font-family="Poppins, sans-serif"
+        font-size="40"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#0099B3"
+        letter-spacing="3">TRIAD</text>
+
+  <text x="250" y="420"
+        font-family="Poppins, sans-serif"
+        font-size="14"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#00D9D9"
+        letter-spacing="1">THERAPEUTIC CLINIC</text>
+
+  <!-- Design notes -->
+  <text x="250" y="455"
+        font-family="Arial, sans-serif"
+        font-size="10"
+        text-anchor="middle"
+        fill="#999">Concept 2: Modern & Innovative</text>
+
+  <text x="250" y="470"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        text-anchor="middle"
+        fill="#AAA">Interconnected geometric forms represent precision healthcare systems</text>
+</svg>
