@@ -1,0 +1,120 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+    </style>
+
+    <!-- Radial gradient for glow effect -->
+    <radialGradient id="glowTeal" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#2B7A78;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Primary gradient -->
+    <linearGradient id="teelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B9B8F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F5F5A;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent gradient -->
+    <linearGradient id="sageGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7FC9B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5FA899;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Text shadow filter -->
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow filter for logo -->
+    <filter id="logoGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="900" fill="#FAFAF8"/>
+
+  <!-- Glow background circle -->
+  <circle cx="400" cy="300" r="180" fill="url(#glowTeal)"/>
+
+  <!-- CONCEPT 1: LUXURY MINIMALIST -->
+  <!-- Three elegant curved lines forming circular integration -->
+
+  <!-- Outer circle frame -->
+  <circle cx="400" cy="300" r="140" fill="none" stroke="#2B9B8F" stroke-width="2" opacity="0.3"/>
+
+  <!-- First curve (top-left to bottom-right) -->
+  <path d="M 320 200 Q 400 180, 480 240"
+        fill="none"
+        stroke="url(#teelGradient)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#logoGlow)"
+        opacity="0.95"/>
+
+  <!-- Second curve (top-right to bottom-left) -->
+  <path d="M 480 200 Q 400 240, 320 360"
+        fill="none"
+        stroke="url(#sageGradient)"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#logoGlow)"
+        opacity="0.95"/>
+
+  <!-- Third curve (bottom to top-center) -->
+  <path d="M 400 420 Q 360 350, 400 200"
+        fill="none"
+        stroke="#2B9B8F"
+        stroke-width="8"
+        stroke-linecap="round"
+        filter="url(#logoGlow)"
+        opacity="0.9"
+        style="mix-blend-mode: lighten"/>
+
+  <!-- Accent dots at intersection points (subtle) -->
+  <circle cx="400" cy="300" r="4" fill="#2B9B8F" opacity="0.4"/>
+
+  <!-- Primary text: TRIAD -->
+  <text x="400" y="560"
+        font-family="Montserrat, sans-serif"
+        font-size="72"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#1F5F5A"
+        letter-spacing="2">TRIAD</text>
+
+  <!-- Secondary text: Therapeutic Clinic -->
+  <text x="400" y="625"
+        font-family="Montserrat, sans-serif"
+        font-size="28"
+        font-weight="300"
+        text-anchor="middle"
+        fill="#2B9B8F"
+        letter-spacing="1">THERAPEUTIC CLINIC</text>
+
+  <!-- Accent line -->
+  <line x1="250" y1="650" x2="550" y2="650"
+        stroke="#7FC9B8"
+        stroke-width="1.5"
+        opacity="0.6"/>
+
+  <!-- Design philosophy note -->
+  <text x="400" y="750"
+        font-family="Montserrat, sans-serif"
+        font-size="14"
+        font-weight="300"
+        text-anchor="middle"
+        fill="#666"
+        opacity="0.7">Minimalist Luxury Concept
+Three flowing curves representing integrated healing</text>
+</svg>

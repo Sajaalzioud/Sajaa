@@ -1,0 +1,161 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+    </style>
+
+    <!-- Rich jewel tone gradients -->
+    <radialGradient id="artisticTeal" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#3EEAE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1E9B97;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D4D4A;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="artisticSage" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#8FFCE8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4DB8A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F7A6B;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="artisticWarmth" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFB88C;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E8845D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B84420;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Soft glow for artistic effect -->
+    <filter id="artisticGlow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feFlood flood-color="#3EEAE8" flood-opacity="0.3" result="coloredFlood"/>
+      <feComposite in="coloredFlood" in2="coloredBlur" operator="in" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1" result="offsetcolor"/>
+      <feComposite in="offsetcolor" in2="offsetblur" operator="in" result="offsetblur"/>
+      <feMerge>
+        <feMergeNode in="offsetblur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Premium background with subtle gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEFCF9"/>
+      <stop offset="100%" style="stop-color:#F5F0EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bgGradient)"/>
+
+  <!-- CONCEPT 3: PREMIUM ARTISTIC - Holistic Collaboration -->
+  <!-- Three overlapping organic shapes representing harmonious healthcare -->
+
+  <!-- Top-left shape: Flowing organic form -->
+  <path d="M 280 240 Q 240 260 250 320 Q 260 360 310 370 Q 340 375 360 340 Q 370 310 360 270 Q 350 240 320 230 Q 300 220 280 240 Z"
+        fill="url(#artisticTeal)"
+        filter="url(#artisticGlow)"
+        opacity="0.85"
+        style="mix-blend-mode: normal"/>
+
+  <!-- Top-right shape: Complementary organic flow -->
+  <path d="M 520 250 Q 570 230 580 290 Q 590 340 550 360 Q 500 375 470 345 Q 450 315 460 270 Q 480 235 520 250 Z"
+        fill="url(#artisticWarmth)"
+        filter="url(#artisticGlow)"
+        opacity="0.80"/>
+
+  <!-- Center-bottom shape: Unifying element -->
+  <path d="M 350 350 Q 300 380 320 440 Q 350 480 400 485 Q 450 480 480 440 Q 500 380 450 350 Q 420 330 350 350 Z"
+        fill="url(#artisticSage)"
+        filter="url(#artisticGlow)"
+        opacity="0.82"/>
+
+  <!-- Connecting threads (subtle) -->
+  <path d="M 360 310 Q 380 330 400 350"
+        fill="none"
+        stroke="#3EEAE8"
+        stroke-width="1.5"
+        opacity="0.4"
+        stroke-linecap="round"/>
+
+  <path d="M 470 310 Q 420 330 400 350"
+        fill="none"
+        stroke="#FFB88C"
+        stroke-width="1.5"
+        opacity="0.4"
+        stroke-linecap="round"/>
+
+  <!-- Center focal point -->
+  <circle cx="400" cy="350" r="5"
+          fill="#3EEAE8"
+          filter="url(#artisticGlow)"
+          opacity="0.7"/>
+
+  <!-- Decorative accent circles (very subtle) -->
+  <circle cx="310" cy="300" r="2"
+          fill="#1E9B97"
+          opacity="0.3"/>
+
+  <circle cx="490" cy="310" r="2"
+          fill="#B84420"
+          opacity="0.3"/>
+
+  <!-- Primary text: TRIAD (Elegant serif) -->
+  <text x="400" y="560"
+        font-family="Lora, serif"
+        font-size="68"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#0D4D4A"
+        letter-spacing="3"
+        filter="url(#softShadow)">TRIAD</text>
+
+  <!-- Secondary text: Therapeutic Clinic (Modern paired font) -->
+  <text x="400" y="628"
+        font-family="Poppins, sans-serif"
+        font-size="24"
+        font-weight="500"
+        text-anchor="middle"
+        fill="#1E9B97"
+        letter-spacing="1.5">THERAPEUTIC CLINIC</text>
+
+  <!-- Elegant separator line -->
+  <line x1="250" y1="655" x2="550" y2="655"
+        stroke="url(#artisticSage)"
+        stroke-width="1"
+        opacity="0.4"/>
+
+  <!-- Design philosophy (premium typeface) -->
+  <text x="400" y="750"
+        font-family="Lora, serif"
+        font-size="15"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#0D4D4A"
+        opacity="0.9">Premium Artistic Concept</text>
+
+  <text x="400" y="775"
+        font-family="Poppins, sans-serif"
+        font-size="13"
+        font-weight="300"
+        text-anchor="middle"
+        fill="#1E9B97"
+        opacity="0.8">Organic shapes symbolize holistic patient care</text>
+
+  <text x="400" y="795"
+        font-family="Poppins, sans-serif"
+        font-size="12"
+        font-weight="300"
+        text-anchor="middle"
+        fill="#666"
+        opacity="0.6">Three specialties flowing together in harmonious integration</text>
+</svg>

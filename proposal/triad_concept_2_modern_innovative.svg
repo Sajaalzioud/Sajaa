@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    </style>
+
+    <!-- Vibrant teal gradient -->
+    <linearGradient id="modernTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099B3;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Vibrant sage gradient -->
+    <linearGradient id="modernSage" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5FE3C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2FB89C;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent gradient (coral/warm) -->
+    <linearGradient id="modernAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9F6E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E85D3B;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Dynamic glow -->
+    <filter id="modernGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong shadow -->
+    <filter id="strongShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="900" fill="#F0FFFE"/>
+
+  <!-- Background accent shapes -->
+  <circle cx="600" cy="150" r="100" fill="url(#modernAccent)" opacity="0.08"/>
+  <circle cx="150" cy="350" r="80" fill="url(#modernTeal)" opacity="0.06"/>
+
+  <!-- CONCEPT 2: MODERN INNOVATIVE -->
+  <!-- Three interlocking geometric hexagons representing healthcare innovation -->
+
+  <!-- Left hexagon -->
+  <path d="M 300 240 L 350 200 L 400 220 L 380 270 L 330 290 Z"
+        fill="url(#modernTeal)"
+        stroke="none"
+        filter="url(#modernGlow)"
+        opacity="0.85"/>
+
+  <!-- Center hexagon -->
+  <path d="M 380 270 L 430 230 L 480 250 L 460 320 L 410 340 Z"
+        fill="url(#modernSage)"
+        stroke="none"
+        filter="url(#modernGlow)"
+        opacity="0.90"/>
+
+  <!-- Right hexagon -->
+  <path d="M 460 320 L 510 280 L 560 300 L 540 370 L 490 390 Z"
+        fill="url(#modernAccent)"
+        stroke="none"
+        filter="url(#modernGlow)"
+        opacity="0.85"/>
+
+  <!-- Interconnecting lines showing integration -->
+  <line x1="400" y1="220" x2="430" y2="230"
+        stroke="#00D9D9"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="380" y1="270" x2="410" y2="290"
+        stroke="#2FB89C"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <line x1="460" y1="320" x2="480" y2="310"
+        stroke="#E85D3B"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <!-- Center integration node -->
+  <circle cx="430" cy="290" r="6"
+          fill="#00D9D9"
+          filter="url(#modernGlow)"
+          opacity="0.9"/>
+
+  <!-- Primary text: TRIAD -->
+  <text x="400" y="560"
+        font-family="Poppins, sans-serif"
+        font-size="76"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#0099B3"
+        letter-spacing="3">TRIAD</text>
+
+  <!-- Secondary text: Therapeutic Clinic -->
+  <text x="400" y="625"
+        font-family="Poppins, sans-serif"
+        font-size="26"
+        font-weight="600"
+        text-anchor="middle"
+        fill="#00D9D9"
+        letter-spacing="2">THERAPEUTIC CLINIC</text>
+
+  <!-- Decorative accent lines -->
+  <line x1="200" y1="650" x2="280" y2="650"
+        stroke="url(#modernTeal)"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        opacity="0.7"/>
+
+  <line x1="520" y1="650" x2="600" y2="650"
+        stroke="url(#modernAccent)"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        opacity="0.7"/>
+
+  <!-- Design philosophy -->
+  <text x="400" y="750"
+        font-family="Poppins, sans-serif"
+        font-size="14"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#0099B3"
+        opacity="0.8">Modern Innovative Concept
+Hexagons represent interconnected healthcare systems</text>
+
+  <text x="400" y="770"
+        font-family="Poppins, sans-serif"
+        font-size="12"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#666"
+        opacity="0.6">Three specialties unified through precision and technology</text>
+</svg>
